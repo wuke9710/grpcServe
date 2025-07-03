@@ -73,8 +73,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-	<Protobuf Include="greeter.proto" GrpcServices="Both" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\greeter\greeter.csproj">
+      <Project>{5704a04a-4694-4d8f-b4a2-0562fe051b41}</Project>
+      <Name>greeter</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Grpc.Core.2.46.6\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.46.6\build\net45\Grpc.Core.targets')" />
