@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+	<Protobuf Include="greeter.proto" GrpcServices="Both" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -86,7 +87,4 @@
     <Error Condition="!Exists('..\packages\Grpc.Tools.2.72.0\build\Grpc.Tools.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Tools.2.72.0\build\Grpc.Tools.targets'))" />
   </Target>
   <Import Project="..\packages\Grpc.Tools.2.72.0\build\Grpc.Tools.targets" Condition="Exists('..\packages\Grpc.Tools.2.72.0\build\Grpc.Tools.targets')" />
-  <ItemGroup>
-  <Protobuf Include="greeter.proto" GrpcServices="Both" />
-</ItemGroup>
 </Project>
