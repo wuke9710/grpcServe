@@ -4,14 +4,17 @@ option csharp_namespace = "GrpcDemo";
 
 package greet;
 
-service Greeter {
+service Greeter 
+{
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
-message HelloRequest {
+message HelloRequest 
+{
   string name = 1;
 }
 
-message HelloReply {
+message HelloReply 
+{
   string message = 1;
 }
